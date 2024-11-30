@@ -1,0 +1,75 @@
+﻿# General settings
+* text=auto
+
+# Line endings settings
+*.sh eol=lf     # Shell scripts use LF (Linux/Unix)
+*.bat eol=crlf  # Batch files use CRLF (Windows)
+*.cmd eol=crlf  # Command files use CRLF (Windows)
+*.ps1 eol=crlf  # PowerShell scripts use CRLF (Windows)
+
+# JavaScript/TypeScript files
+*.js linguist-language=JavaScript  # Classify as JavaScript
+*.jsx linguist-language=JavaScript # Classify as JavaScript
+*.ts linguist-language=TypeScript  # Classify as TypeScript
+*.tsx linguist-language=TypeScript # Classify as TypeScript
+
+# Style files
+*.css linguist-language=CSS        # Classify as CSS
+*.scss linguist-language=Sass      # Classify as Sass
+*.less linguist-language=Less      # Classify as Less
+
+# HTML/JSON/YAML files
+*.html linguist-language=HTML      # Classify as HTML
+*.json linguist-language=JSON      # Classify as JSON
+*.yaml linguist-language=YAML      # Classify as YAML
+*.yml linguist-language=YAML       # Classify as YAML
+
+# Markdown and documentation files
+*.md linguist-documentation        # Mark as documentation
+*.rst linguist-documentation       # Mark as documentation
+
+# Test files
+*.spec.js linguist-test            # Mark as test files
+*.test.js linguist-test            # Mark as test files
+*.spec.ts linguist-test            # Mark as test files
+*.test.ts linguist-test            # Mark as test files
+
+# Configuration files
+*.env linguist-vendored            # Exclude from statistics
+*.env.* linguist-vendored          # Exclude from statistics
+*.config.js linguist-vendored      # Exclude from statistics
+*.config.ts linguist-vendored      # Exclude from statistics
+*.prettierrc linguist-vendored     # Exclude from statistics
+*.eslintrc linguist-vendored       # Exclude from statistics
+*.eslintcache linguist-vendored    # Exclude from statistics
+*.babelrc linguist-vendored        # Exclude from statistics
+
+# WebStorm/JetBrains IDE files
+.idea/* linguist-vendored          # Exclude IDE-specific files
+*.iml linguist-vendored            # Exclude IDE-specific files
+
+# Binary files (images, fonts, etc.)
+*.png binary                       # Treat as binary
+*.jpg binary                       # Treat as binary
+*.jpeg binary                      # Treat as binary
+*.gif binary                       # Treat as binary
+*.ico binary                       # Treat as binary
+*.svg binary                       # Treat as binary
+*.woff binary                      # Treat as binary
+*.woff2 binary                     # Treat as binary
+*.ttf binary                       # Treat as binary
+*.eot binary                       # Treat as binary
+
+# Fonts
+*.woff linguist-vendored           # Exclude fonts from statistics
+*.woff2 linguist-vendored          # Exclude fonts from statistics
+*.ttf linguist-vendored            # Exclude fonts from statistics
+*.eot linguist-vendored            # Exclude fonts from statistics
+
+# Other file types
+*.lock linguist-vendored           # Exclude lock files from statistics
+*.log linguist-generated           # Mark logs as generated
+*.tmp linguist-generated           # Mark temporary files as generated
+*.bak linguist-generated           # Mark backup files as generated
+.DS_Store linguist-generated       # Mark macOS system files as generated
+Thumbs.db linguist-generated       # Mark Windows system files as generated

@@ -26,6 +26,8 @@ Welcome to **FriskaySite**! This is a test repository designed to showcase basic
 
 - 📘 **[Typical Project Structure and Naming Conventions](./docs/project-structure.md)**  
   A detailed guide to organizing your project files and following naming conventions for better readability and scalability.
+- 📗 **[Semantic HTML](./docs/semantic-html.md)**  
+  Includes practical examples, common patterns, and tips for creating well-organized, accessible websites.
 
 ## 🔧 How to Use
 

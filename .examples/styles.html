@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styling Guide</title>
+    <style>
+        /* Base styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --danger-color: #e74c3c;
+            --warning-color: #f1c40f;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --shadow: 0 2px 4px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Layout Components */
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background-color: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+            margin: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: var(--danger-color);
+            color: white;
+        }
+
+        .btn-warning {
+            background-color: var(--warning-color);
+            color: var(--dark-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        /* Text Inputs */
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        .input-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        .input-field:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        /* Cards */
+        .card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        .card-footer {
+            background-color: var(--light-color);
+            padding: 1rem;
+            text-align: right;
+        }
+
+        /* Grid System */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        /* Alerts */
+        .alert {
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert-warning {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+        }
+
+        /* Badges */
+        .badge {
+            padding: 0.25rem 0.5rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .badge-primary { background-color: var(--primary-color); color: white; }
+        .badge-secondary { background-color: var(--secondary-color); color: white; }
+        .badge-danger { background-color: var(--danger-color); color: white; }
+
+        /* Loading Spinners */
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Tooltips */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--dark-color);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        /* Progress Bars */
+        .progress {
+            height: 20px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>CSS Styling Guide</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#inputs">Form Elements</a></li>
+        <li><a href="#cards">Cards</a></li>
+        <li><a href="#components">Components</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="buttons">
+        <h2>Buttons</h2>
+        <button class="btn btn-primary">Primary Button</button>
+        <button class="btn btn-secondary">Secondary Button</button>
+        <button class="btn btn-danger">Danger Button</button>
+        <button class="btn btn-warning">Warning Button</button>
+        <button class="btn btn-outline">Outline Button</button>
+    </section>
+
+    <section id="inputs">
+        <h2>Form Elements</h2>
+        <div class="input-group">
+            <label class="input-label">Username</label>
+            <input type="text" class="input-field" placeholder="Enter username">
+        </div>
+        <div class="input-group">
+            <label class="input-label">Password</label>
+            <input type="password" class="input-field" placeholder="Enter password">
+        </div>
+    </section>
+
+    <section id="cards">
+        <h2>Cards</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Card Title</h3>
+                </div>
+                <div class="card-body">
+                    <p>This is a sample card with some content.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary">Action</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h3>Featured</h3>
+                </div>
+                <div class="card-body">
+                    <p>Another card with different content.</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="components">
+        <h2>Additional Components</h2>
+
+        <h3>Alerts</h3>
+        <div class="alert alert-success">This is a success alert!</div>
+        <div class="alert alert-danger">This is a danger alert!</div>
+        <div class="alert alert-warning">This is a warning alert!</div>
+
+        <h3>Badges</h3>
+        <span class="badge badge-primary">New</span>
+        <span class="badge badge-secondary">Updated</span>
+        <span class="badge badge-danger">Hot</span>
+
+        <h3>Loading Spinner</h3>
+        <div class="spinner"></div>
+
+        <h3>Tooltips</h3>
+        <button class="btn btn-primary tooltip" data-tooltip="This is a tooltip!">
+            Hover me
+        </button>
+
+        <h3>Progress Bar</h3>
+        <div class="progress">
+            <div class="progress-bar" style="width: 75%"></div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

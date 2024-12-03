@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements Styling Guide</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --danger-color: #e74c3c;
+            --warning-color: #f1c40f;
+            --dark-color: #2c3e50;
+            --light-color: #ecf0f1;
+            --gray-color: #95a5a6;
+            --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f6fa;
+        }
+
+        header {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        /* Checkbox and Radio Styles */
+        .form-check {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+
+        .form-check-input {
+            margin-right: 0.5rem;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        /* Select Styles */
+        .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M8 12L1 5h14z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 12px;
+        }
+
+        /* File Input Styles */
+        .form-file {
+            position: relative;
+        }
+
+        .form-file-input {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .form-file-label {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--light-color);
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-file-label:hover {
+            background-color: #ddd;
+        }
+
+        /* Range Input Styles */
+        .form-range {
+            width: 100%;
+            height: 8px;
+            padding: 0;
+            background-color: #ddd;
+            border-radius: 4px;
+            appearance: none;
+        }
+
+        .form-range::-webkit-slider-thumb {
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+        }
+
+        /* Validation Styles */
+        .is-valid {
+            border-color: var(--secondary-color);
+        }
+
+        .is-invalid {
+            border-color: var(--danger-color);
+        }
+
+        .invalid-feedback {
+            color: var(--danger-color);
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* Disabled States */
+        .form-control:disabled,
+        .form-control[readonly] {
+            background-color: #e9ecef;
+            opacity: 1;
+            cursor: not-allowed;
+        }
+
+        /* Required Field Indicator */
+        .required::after {
+            content: "*";
+            color: var(--danger-color);
+            margin-left: 4px;
+        }
+
+        /* Form Grid */
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Form Elements Styling Guide</h1>
+</header>
+
+<main>
+    <div class="form-container">
+        <form action="#" method="POST" id="sampleForm">
+            <!-- Text Inputs -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label required" for="firstName">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label required" for="lastName">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required>
+                </div>
+            </div>
+
+            <!-- Email Input with Validation -->
+            <div class="form-group">
+                <label class="form-label required" for="email">Email</label>
+                <input type="email" class="form-control is-invalid" id="email" placeholder="Enter email">
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+                <label class="form-label required" for="password">Password</label>
+
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+            </div>
+
+            <!-- Select Dropdown -->
+            <div class="form-group">
+                <label class="form-label" for="country">Country</label>
+                <select class="form-select" id="country">
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="ca">Canada</option>
+                </select>
+            </div>
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+
+            <!-- Checkboxes -->
+            <div class="form-group">
+                <label class="form-label">Interests</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="coding">
+                    <label class="form-check-label" for="coding">Coding</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="design">
+                    <label class="form-check-label" for="design">Design</label>
+                </div>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="form-group">
+                <label class="form-label">Gender</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" id="male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="gender" id="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+
+            <!-- File Input -->
+            <div class="form-group">
+                <label class="form-label" for="file">Upload File</label>
+                <div class="form-file">
+                    <input type="file" class="form-file-input" id="file">
+                    <label class="form-file-label" for="file">Choose file...</label>
+                </div>
+            </div>
+
+            <!-- Range Input -->
+            <div class="form-group">
+                <label class="form-label" for="range">Experience Level</label>
+                <input type="range" class="form-range" id="range" min="0" max="100">
+            </div>
+
+            <!-- Disabled Input -->
+            <div class="form-group">
+                <label class="form-label" for="disabled">Disabled Input</label>
+                <input type="text" class="form-control" id="disabled" placeholder="Disabled input" disabled>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Submit Form</button>
+            </div>
+
+        </form>
+    </div>
+</main>
+</body>
+</html>

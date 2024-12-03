@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development: HTML Fundamentals</title>
+    <style>
+        /* Base styles for demonstration */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        article {
+            background-color: #f9f9f9;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        aside {
+            background-color: #edf2f7;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #2c3e50;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .example-box {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin: 1rem 0;
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Web Development: HTML Fundamentals</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#text-formatting">Text Formatting</a></li>
+        <li><a href="#examples">Examples</a></li>
+        <li><a href="#resources">Resources</a></li>
+    </ul>
+</nav>
+
+<main>
+    <article id="text-formatting">
+        <h2>Text Formatting Examples</h2>
+
+        <div class="example-box">
+            <h3>Basic Text Formatting</h3>
+            <p>This is <b>bold text</b> using the b tag.</p>
+            <p>This is <strong>important text</strong> using the strong tag.</p>
+            <p>This is <i>italic text</i> using the i tag.</p>
+            <p>This is <em>emphasized text</em> using the em tag.</p>
+            <p>You can <mark>highlight text</mark> using the mark tag.</p>
+            <p>Here's some <small>smaller text</small> using the small tag.</p>
+            <p>This shows <del>deleted text</del> and <ins>inserted text</ins>.</p>
+            <p>Chemical formula: H<sub>2</sub>O</p>
+            <p>Mathematical expression: x<sup>2</sup></p>
+        </div>
+    </article>
+
+    <article id="examples">
+        <h2>Practical Examples</h2>
+
+        <section class="example-box">
+            <h3>Scientific Text</h3>
+            <p>
+                The chemical reaction 2H<sub>2</sub> + O<sub>2</sub> → 2H<sub>2</sub>O
+                produces water at 25°C<sup>*</sup>
+                <small>* Under standard conditions</small>
+            </p>
+        </section>
+
+        <section class="example-box">
+            <h3>Document Revision</h3>
+            <p>
+                Document version 2.0<br>
+                <del>Old pricing: $99</del><br>
+                <ins>New pricing: $89</ins><br>
+                <mark>Special offer!</mark>
+            </p>
+        </section>
+    </article>
+
+    <aside id="resources">
+        <h3>Additional Resources</h3>
+        <p>Learn more about HTML text formatting:</p>
+        <ul>
+            <li><strong>MDN Web Docs</strong> - Comprehensive HTML guides</li>
+            <li><em>W3Schools</em> - Interactive tutorials</li>
+            <li>HTML5 Specification - Official documentation</li>
+        </ul>
+    </aside>
+</main>
+
+<footer>
+    <p>Created for learning purposes | <small>HTML Text Formatting Examples</small></p>
+</footer>
+</body>
+</html>
